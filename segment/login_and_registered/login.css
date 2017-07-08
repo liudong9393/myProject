@@ -1,0 +1,110 @@
+/*登录代码片段样式*/
+
+
+/*登录和注册最外层样式*/
+
+
+/*登录样式*/
+
+.login_and_registered {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding-top: 100px;
+}
+
+
+/*登录注册内部样式*/
+
+.login_and_registered .login_and_registered_all {
+    width: 35%;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 5px;
+    border-radius: 4%;
+}
+
+
+/*登录框的位置*/
+
+.login_and_registered .login_and_registered_all .login {
+    padding: 15px;
+}
+
+.login_and_registered .login_and_registered_all .login .shut_down {
+    position: relative;
+    right: -78%;
+    color: #000;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.login_and_registered .login_and_registered_all .login .shut_down:hover {
+    color: #c40000;
+}
+
+
+/*标题样式*/
+
+.login_and_registered_title {
+    color: #C30000;
+    font-size: 25px;
+    font-weight: 700;
+    padding: 10px 0 20px;
+}
+
+
+/*用户名密码验证码外侧样式*/
+
+.login_and_registered .login_and_registered_all .login>.user_name_login,.password_login,.login_verification_code {
+    padding: 10px;
+    font-weight: 700;
+    font-size: 20px;
+}
+/*验证码样式*/
+.login_verification_code{
+    position: relative;
+}
+.login_verification_code > span{
+    position:absolute;
+    right: 65px;
+    top: 13px;
+    border:1px solid #aaa;
+    height:40px;
+    width:15%;
+    font-size: 12px;
+    text-align: center;
+    line-height: 40px;
+    font-weight: 100;
+}
+
+/*用户名密码input框样式*/
+
+.login_and_registered .login_and_registered_all .login>div>label>input {
+    width: 65%;
+    border-radius: 2%;
+    height: 35px;
+    padding: 5px;
+    outline: none;
+}
+.login_and_registered .login_and_registered_all .login>div>label>span{
+    display: inline-block;
+    width: 20%;
+    text-align-last: justify;
+}
+/*按钮样式*/
+.login_and_registered .login_and_registered_all .login .btn_login {
+    display: flex;
+    padding-top: 10px;
+    margin-left: 20%;
+}
+
+
+
+
+
+
+
+
+

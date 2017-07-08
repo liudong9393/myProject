@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <!-- 引入小图标 -->
+    <link href="../../images/icon/logo_icon.ico" rel="shortcut icon"/>
+    <meta charset="UTF-8">
+    <title>意见反馈</title>
+    <link rel="stylesheet" href="feedback.css"/>
+</head>
+<body>
+<div class = "feedback">
+    <div class ="feedback_container">
+        <div class="feedback_title">
+            <div class="feedback_name">
+                <span>校友会</span>|首页-用户反馈调查单
+            </div>
+            <div class="welcome">
+                <p class="">尊敬的用户:</p>
+                <p class="">您好！为了可以提高对您的服务质量，我们希望可以
+                    收集您对使用本网站首页时的观点和建议。我们对您的配合和支持表示衷心感谢！</p>
+            </div>
+        </div>
+        <div class ="feedback_content">
+            <div class ="feedback_one">
+                <div class="feedback_text">
+                    <div>
+                        <label for="text">如果您在使用首页时，有什么好或不好的地方，请大声说出来！我们会关注您的反馈，不断优化产品，为您提供更好的服务！</label>
+                    </div>
+                        <textarea rows="10" cols="80" id="text"></textarea>
+                </div>
+            </div>
+
+            <div class ="feedback_two">
+                <div>您对我们的整体服务满意度如何？</div>
+                <div class="feedback_radio">
+                    <label for="very_pleased">
+                        <input type="radio" name="level" id="very_pleased"/>很满意
+                    </label>
+                </div>
+                <div class="feedback_radio">
+                    <label for="pleased">
+                        <input type="radio" name="level" id="pleased"/>满意
+                    </label>
+                </div>
+                <div class="feedback_radio">
+                    <label for="general">
+                        <input type="radio" name="level" id="general"/>一般
+                    </label>
+                </div>
+                <div class="feedback_radio">
+                    <label for="not_pleased">
+                        <input type="radio" name="level" id="not_pleased"/>不满意
+                    </label>
+                </div>
+                <div class="feedback_radio">
+                    <label for="very_not_pleased">
+                        <input type="radio" name="level" id="very_not_pleased"/>很不满意
+                    </label>
+                </div>
+            </div>
+            <div class ="feedback_three">
+                <div>我们会不定期邀请用户参与面对面的交流。如果您有意参与，请填写如下信息，方便我们与您联系，谢谢！（信息仅作为内部资料绝不外泄）</div>
+                <div class="feedback_radio">
+                    <div><label for="feedback_name"><span>姓名</span><input type="text" id="feedback_name"/></label></div>
+                    <div><label for="feedback_phone"><span>手机号</span><input type="text" id="feedback_phone"/></label></div>
+                </div>
+            </div>
+            <div class="submit">
+                <input type="button" value="提交" id="btn_feedback"/>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="feedback.js"></script>
+<script src="../../js/jquery.js"></script>
+</body>
+</html>

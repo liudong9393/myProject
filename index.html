@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- 引入小图标 -->
+        <link href="images/icon/logo_icon.ico" rel="shortcut icon"/>
+        <link href="" rel="stylesheet"/>
+        <meta charset="utf-8"/>
+        <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+        <!-- 标题 -->
+        <title>校友会</title>
+        <!-- 引入样式表 -->
+        <!-- 页面的默认样式 -->
+        <link href="style/initialize.css" rel="stylesheet"/>
+        <link href="style/Swiper-3.3.1/css/swiper.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="segment/login_and_registered/login.css"/>
+        <link href="style/index.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <a name="back_top">
+        </a>
+        <!-- 首页的内容 -->
+        <!-- 首页开头标题 -->
+        <header class="head" id="header clearFix">
+            <!-- 导航栏以及轮播图 -->
+            <nav class="nav clearFix">
+                <!-- 导航栏顶部 -->
+                <div class="nav_top clearFix">
+                    <ul class="nav_top_one clearFix">
+                        <li>首页</li>
+                        <li>欢迎进入商城</li>
+                        <li class="please_login">请登录</li>
+                        <li><a href="segment/login_and_registered/registered.html">
+                            免费注册
+                        </a></li>
+                        <li>附近商家</li>
+                    </ul>
+                    <ul class="nav_top_two clearFix">
+                        <li>下载</li>
+                        <li>卖家中心</li>
+                        <li>商品分类</li>
+                        <li>购物车</li>
+                        <li>收藏夹</li>
+                        <li>我的订单</li>
+                    </ul>
+                </div>
+                <!-- logo -->
+                <div class="loge">
+                    <img alt="图片为正常加载" src="images/logo/logo1.jpg"/>
+                </div>
+                <!-- 导航栏的搜索框 -->
+                <div class="nav_middle">
+                    <div class="nav_input">
+                        <label class="search" for="search">
+                            <input id="search" name="search" placeholder="寻找服务、商品、店铺" type="text"/>
+                        </label>
+                        <input id="btn_search" name="btn_search" type="button" value="搜索"/>
+                    </div>
+                </div>
+                <!-- 正式进入导航栏 -->
+                <div class="nav_bottom clearFix">
+                    <ul class="nav_bottom_nav clearFix">
+                        <li class="active" data-href="index" id="nav_index">首页</li>
+                        <li data-href="study" id="nav_study">学习</li>
+                        <li data-href="exam" id="nav_exam">考试</li>
+                        <li data-href="part_time" id="nav_part_time">兼职</li>
+                        <li data-href="internship" id="nav_internship">实习</li>
+                        <li data-href="thesis" id="nav_thesis">论文</li>
+                        <li data-href="communication" id="nav_communication">交流</li>
+                        <li data-href="contact_us" id="nav_contact_us">联系我们</li>
+                    </ul>
+                    <div class="nav_loop">
+                        <!-- 左侧导航 -->
+                        <ul class="nav_bottom_left clearFix">
+                            <li class="all_classfy">全部分类</li>
+                            <li>文本</li>
+                            <li>文本</li>
+                            <li>文本</li>
+                            <li>文本</li>
+                            <li>文本</li>
+                            <li>文本</li>
+                            <li>文本</li>
+                            <li>文本</li>
+                            <li>文本</li>
+                            <li>文本</li>
+                        </ul>
+                        <!-- 轮播图 -->
+                        <div class="loop">
+                            <div class="img-container swiper-container">
+                                <div class="swiper-wrapper" id="lb">
+                                    <div class="swiper-slide">
+                                        <img alt="图片未成功加载" src="images/pic/pic1.jpg"/>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img alt="图片未成功加载" src="images/pic/pic1.jpg"/>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img alt="图片未成功加载" src="images/pic/pic1.jpg"/>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img alt="图片未成功加载" src="images/pic/pic1.jpg"/>
+                                    </div>
+                                </div>
+                                <div class="swiper-button swiper-button-prev"></div>
+                                <div class="swiper-button swiper-button-next"></div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <!-- 广告预留区 -->
+                        <div class="ad">
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- 楼梯导航 -->
+        <div class="stair_nav">
+            <!-- 左侧楼梯导航 -->
+            <ul class="stair_nav_left">
+                <li><a href="#study" class="nav_left">看书学习</a></li>
+                <li><a href="#exam" class="nav_left">期末考试</a></li>
+                <li><a href="#job" class="nav_left">兼职实习</a></li>
+                <li><a href="#thesis" class="nav_left">论文参考</a></li>
+                <li><a href="#print" class="nav_left">打印复印</a></li>
+                <li><a href="#talk" class="nav_left">讨论交流</a></li>
+                <li><a href="#active" class="nav_left">组织活动</a></li>
+                <li><a href="#around" class="nav_left">大学周边</a></li>
+            </ul>
+            <!-- 右侧楼梯导航 -->
+            <ul class="stair_nav_right">
+                <div class="line"></div>
+                <li>我的账号</li>
+                <li>我的订单</li>
+                <li>我的关注</li>
+                <li>我的足迹</li>
+                <li>我的信息</li>
+                <li>业务咨询</li>
+                <li class="feed_back">意见反馈</li>
+                <li class="back_top"><a href="#back_top">顶部</a></li>
+            </ul>
+        </div>
+        <!-- 正文 -->
+        <div class="container">
+            <div class="study" data-classify-index="0">
+                <div class="study_title">
+                    <a name="study">学习</a>
+                </div>
+                <div class="study_container">
+                    <!-- 商品、商家图片展示 -->
+                    <div class="commodity">
+                        <div class="commodity_information">
+                            <!-- 图片 -->
+                            <div class="commodity_img">
+                                <img alt="图片未加载" src=""/>
+
+                            </div>
+                            <!-- 商家、商品的信息 -->
+                            <div class="commodity_word">
+                                有品(PICOOC)智能体脂秤 MINI 14项身体数据 健康解决方案 蓝牙脂肪秤 APP控制 家用体重秤 白色
+                                <div>
+                                    <p>
+                                        价格
+                                        <span>
+                                            ￥
+                                        </span>
+                                    </p>
+                                    <p>
+                                        有
+                                        <span>
+                                            多少人
+                                        </span>
+                                        评价
+                                    </p>
+                                </div>
+                            </div>
+                            <p>
+                                加入购物车
+                            </p>
+                        </div>
+                        <div class="commodity_information">
+                            <img alt="图片未加载" src=""/>
+
+                        </div>
+                        <div class="commodity_information">
+                            <img alt="图片未加载" src=""/>
+
+                        </div>
+                    </div>
+                    <div class="commodity">
+                        <div class="commodity_information">
+                            <img alt="图片未加载" src=""/>
+
+                        </div>
+                        <div class="commodity_information">
+                            <img alt="图片未加载" src=""/>
+
+                        </div>
+                        <div class="commodity_information">
+                            <img alt="图片未加载" src=""/>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="study">
+                <div class="study_title">
+                    <a name="exam">期末考试</a>
+                </div>
+                <div class="study_container">
+                    <!-- 商品、商家图片展示 -->
+                    <div class="commodity">
+                        <div class="commodity_information" index="0" classify-index="">
+    <!-- 图片 -->
+    <div class="commodity_img">
+        <img alt="图片未加载" src="">
+    </div>
+    <!-- 商家、商品的信息 -->
+    <div class="commodity_word">
+        <span>有品(PICOOC)智能体脂秤 MINI 14项身体数据 健康解决方案 蓝牙脂肪秤 APP控制 家用体重秤 白色</span>
+        <div>
+            <p>价格<span>￥</span></p>
+            <p>有<span>多少人</span>评价</p>
+        </div>
+    </div>
+    <p class="shopping_cart" data-href="0" style="bottom: -40px;">加入购物车</p>
+</div>
+                        <div class="commodity_information" index="1">
+                            <!-- 图片 -->
+                            <div class="commodity_img">
+                                <img alt="图片未加载" src=""/>
+                            </div>
+                            <!-- 商家、商品的信息 -->
+                            <div class="commodity_word">
+                                <p>
+                                    有品(PICOOC)智能体脂秤 MINI 14项身体数据 健康解决方案 蓝牙脂肪秤 APP控制 家用体重秤 白色
+                                </p>
+                                <div>
+                                    <p>价格<span>￥</span></p>
+                                    <p>有<span>多少人</span>评价</p>
+                                </div>
+                            </div>
+                            <p class="shopping_cart" data-href="1">加入购物车</p>
+                        </div>
+                        <div class="commodity_information" index="2">
+                            <!-- 图片 -->
+                            <div class="commodity_img">
+                                <img alt="图片未加载" src=""/>
+                            </div>
+                            <!-- 商家、商品的信息 -->
+                            <div class="commodity_word">
+                                有品(PICOOC)智能体脂秤 MINI 14项身体数据 健康解决方案 蓝牙脂肪秤 APP控制 家用体重秤 白色
+                                <div><p>价格<span>￥</span></p>
+                                    <p>有<span>多少人</span>评价</p>
+                                </div>
+                            </div>
+                            <p class="shopping_cart" data-href="2">加入购物车</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 页面内容结束部分，页面信息总结，联系方式以及反馈 -->
+        <footer class="footer">
+            <div class="foot">
+                <!-- 尾部的顶部 -->
+                <div class="foot_top">
+                    <div class="foot_top_ad">服务精致，齐全畅选</div>
+                    <div class="foot_top_ad">多快好省，简单生活</div>
+                    <div class="foot_top_ad">快乐校园，轻松无忧</div>
+                    <div class="foot_top_ad">周边商家，定时到位</div>
+                </div>
+                <!-- 尾部的中部 -->
+                <div class="foot_middle">
+                    <div class="foot_middle_con">
+                        <p>学习生活</p>
+                        <ul>
+                            <li onclick="window.open('a.html')">学习资源</li>
+                            <li>视频资料</li>
+                            <li>知识交流</li>
+                            <li>旧物换取</li>
+                            <li>组织活动</li>
+                            <li>组团学习</li>
+                        </ul>
+                    </div>
+                    <div class="foot_middle_con">
+                        <p>实习兼职</p>
+                        <ul>
+                            <li>周边兼职</li>
+                            <li>大学实习</li>
+                            <li>工作交流</li>
+                            <li>企业介绍</li>
+                            <li>工作分享</li>
+                        </ul>
+                    </div>
+                    <div class="foot_middle_con">
+                        <p>打印服务</p>
+                        <ul>
+                            <li>论文打印</li>
+                            <li>学习资料</li>
+                            <li>论文修改</li>
+                            <li>格式咨询</li>
+                            <li>考试资料</li>
+                            <li>日常打印</li>
+                        </ul>
+                    </div>
+                    <div class="foot_middle_con">
+                        <p>关于我们</p>
+                        <ul>
+                            <li>关于校友</li>
+                            <li>APP下载</li>
+                            <li>招兵买马</li>
+                            <li>帮助中心</li>
+                            <li>开放平台</li>
+                            <li>联系我们</li>
+                        </ul>
+                    </div>
+                    <div class="foot_middle_con">
+                        <p>关注我们</p>
+                        <ul>
+                            <li>微信公众号</li>
+                            <li>
+                                <img alt="图片未加载" src=""/>
+                            </li>
+                            <li>QQ交流群</li>
+                            <li><img alt="图片未加载" src=""/></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 尾部的底部 -->
+                <div class="foot_bottom">
+                    <div class="">
+                    </div>
+                    <div class="">
+                        <p>
+                            <span>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- 获取外部页面片段固定在屏幕上-->
+        <div class="obtainPage"></div>
+    </body>
+
+    <!-- 引入js文件，增加页面你动态化效果 -->
+    <!-- <script src="js/jquery-3.1.1.js"> -->
+    <script src="js/jquery.js">
+    </script>
+    <!-- 引入轮播图 -->
+    <script src="style/Swiper-3.3.1/js/swiper.min.js">
+    </script>
+    <script src="js/index.js"></script>
+</html>

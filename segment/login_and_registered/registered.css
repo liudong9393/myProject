@@ -1,0 +1,157 @@
+/*使用弹性盒子*/
+
+.login_and_registered .login_and_registered_all .login .btn_login>div {
+    flex-grow: 1;
+}
+
+.login_and_registered .login_and_registered_all .login .btn_login>div>input {
+    width: 60px;
+    height: 35px;
+    margin-top: 5px;
+    text-align: center;
+    border-radius: 8%;
+    border: none;
+    color: #f1f1f1;
+    font-size: 19px;
+}
+
+.login_and_registered .login_and_registered_all .login .btn_login #btn_registered {
+    background-color: green;
+}
+
+.login_and_registered .login_and_registered_all .login .btn_login #btn_concel {
+    background-color: #666;
+}
+
+.immediately_registered {
+    text-align: right;
+    margin: 20px 20px 10px;
+}
+
+
+/*注册页面样式*/
+.container{
+    width: 100%;
+    display: flex;
+}
+
+/*注册外边框*/
+.registered_container {
+    flex:6;
+    height: auto;
+    margin-top:50px;
+}
+/*注册内部样式*/
+.registered_container .registered {
+    width: 70%;
+    margin: 10px auto 30px;
+}
+/*所有的注册条件的边框样式*/
+.registered_container .registered>div {
+    width: 80%;
+    margin: 0 auto ;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+/*各个注册条件的名称样式*/
+.registered_container .registered>div>label {
+    width: 20%;
+    color: #888;
+    display: inline-block;
+    font-size: 16px;
+    padding: 9px 1.5% 0;
+    text-align-last: justify;
+}
+/*input框样式*/
+.registered_container .registered>div>input {
+    padding: 10px;
+    width:60%;
+    border:none;
+    outline:none;
+    color:#666;
+}
+/*input框的注册条件*/
+.registered_container .registered > span{
+    height: 25px;
+    padding-left:11%;
+    display: block;
+    font-size: 12px;
+    color:#999;
+}
+/*兼容浏览器，input的placeholder的文字颜色*/
+input::-webkit-input-placeholder{
+    color:#666;
+}
+input:-moz-placeholder{
+    color:#666;
+}
+input::-moz-placeholder{
+    color:#666;
+}
+input:-ms-input-placeholder{
+    color:#666;
+}
+/*注册时协议条件样式*/
+.registered_container .registered>div>.login_protocol{
+    width:80%;
+    text-align-last:left;
+}
+
+.registered_container .registered .login_protocol {
+    border: none;
+}
+/*验证码的样式*/
+.registered_verification_code,.phone_verification{
+    position: relative;
+}
+#registered_verification_code,#phone_verification{
+    width:40%;
+}
+.verification_code,.phone_verification_code{
+    width:30%;
+    border:1px solid #aaa;
+    display: inline-block;
+    height:32px;
+    position: absolute;
+    top: 3px;
+    right:2px;
+    text-align: center;
+    line-height: 32px;
+    color:#666;
+    cursor:pointer;
+    border-radius: 3px;
+
+}
+/*注册按钮样式*/
+.registered_container .registered .btn_registered>input{
+    width:100%;
+    margin: 0 auto;
+    font-size: 20px;
+    text-indent:15px;
+    letter-spacing:30px;
+    display: block;
+    color:#666;
+}
+
+
+/*页面右侧*/
+.right_features{
+    flex: 4;
+    border-left:1px solid #dddddd;
+    padding: 100px 0 0 40px;
+}
+.right_features div{
+    padding-bottom:50px;
+    font-size: 16px;
+    color:#999;
+    cursor: pointer;
+}
+.right_features .already_number>span{
+    font-size: 17px;
+    font-weight: 700;
+    color:#333;
+}
+.right_features .businessmen_user_registered{
+    color:#333;
+}
+
