@@ -13,6 +13,7 @@
         });
         // 将变量声明在这个对象中，避免变量污染
         var init = {
+            alreadyLogin: 0,//是否已经登录
             eve: function() { // 获取事件函数
                 e.currentTarget || e.target
             },
@@ -20,20 +21,20 @@
             stair_appear: function() {
                 var top = $(window).scrollTop();
                 if (parseInt(top) >= 600) { //判断页面高度
-                    $(".stair_nav_left").animate({
+                    init.className.stairNavLeft.animate({
                         opacity: '1'
                     }, 30);
+                    init.className.stairNavLeft.css({
+                        "display":"block"
+                    });
                 } else if (parseInt(top) < 600) {
-                    $(".stair_nav_left").animate({
+                    init.className.stairNavLeft.animate({
                         opacity: '0'
                     }, 30);
+                    init.className.stairNavLeft.css({
+                        "display":"none"
+                    });
                 }
-            },
-            // 导航栏点击动画效果函数
-            nav_bottom_animation: function() {
-                // 通过添加类来实现动画样式
-                $('#oli,.active').attr("class", " ");
-                $(this).attr("class", "active");
             },
             timer: null, //对下面函数计数
             //购物车出现函数
@@ -41,7 +42,8 @@
                 clearTimeout(init.timer);
                 //这里触发hover事件
                 var commodity_information_index = $(this).attr("index"); //获取当前这个标签节点
-                var shopping_cart_index = $(this).find(".shopping_cart[data-href]").attr("data-href");
+                var shopping_cart_index = $(this).find(".shopping_cart[data-href]")
+                .attr("data-href");
                 init.timer = setTimeout(function() {//实现当事件在执行时间内不触发这个事件
                     if (commodity_information_index == shopping_cart_index) {//判断标签标记的字符串
                         $(".shopping_cart").eq(parseInt(shopping_cart_index)).animate({
@@ -98,9 +100,41 @@
                     height: "100%",
                     width: "100%"
                 });
+
                 init.className.Html.append('<script src ="'+init.strAddress+'" ></script>');
             },
+            clickFavorite:function(){
+                init.className.localLeft.animate({
+                    width :"80%"
+                },10);
+                $.ajax({
+                    url: "segment/favorite/favorite.html",
+                    type: "get",
+                    success: function(resultData) {
+                        $(".favorite").html(resultData);
+                    },
+                    error:function() {
+                        alert("文件加载有问题!!!");
+                    }
+                });
 
+                init.className.stair_nav_right.animate({
+                    width: "22%",
+                    right:"1%"
+                },50);
+
+                init.className.Html.append('<script src ="segment/favorite/favorite.js" ></script>');
+            },
+            cancelFavorite:function(){
+                $(".favorite").html("");
+                init.className.localLeft.animate({
+                    width :"0%"
+                },10);
+                $(".stair_nav_right").animate({
+                    width: "50px",
+                    right:"-0.5%"
+                },100);
+            },
             //要获取的DOM元素，
             className:{
                 Window:$(window),
@@ -108,14 +142,17 @@
                 Html:$("html"),
                 pleaseLogin:$(".please_login"),//页面顶部登录入口
                 commodity_information:$(".commodity_information"),//商品
-                nav_bottom_nav:$(".nav_bottom_nav"),//Nav中的导航
-                nav_left:$("a.nav_left"),//固定在页面左侧的楼梯导航
+                nav_left:$("a.nav_left,.back_top > a"),//固定在页面左侧的楼梯导航
+                stairNavLeft:$(".stair_nav_left"),//左侧导航
                 obtainPage:$(".obtainPage"),//获取页面标签
-                stair_nav_right:$(".stair_nav_right")//获取右边导航标签
+                stair_nav_right:$(".stair_nav_right"),//获取右边导航标签
+                favoriteClick:$(".favoriteClick"),//点击打开关注
+                favorite:$(".favorite"),//获取关注
+                myFavorite:$(".myFavorite"),//获取关注
+                cancel:$(".cancel"),//  取消关注的“×”
+                localLeft:$(".local_left")//关注页面片段左侧
             }
         };
-        // 导航栏点击事件
-        init.className.nav_bottom_nav.on("click", '#oli', init.nav_bottom_animation);
         // 实现加入购物车的淡入淡出
         init.className.commodity_information.mouseenter(init.fade_in_cart)
             .mouseleave(init.fade_out_cart);
@@ -125,18 +162,24 @@
         //实现缓冲运动
         init.className.nav_left.on("click", init.nav_buffer_move);
         //ajax获取外部登录页面
-        init.className.stair_nav_right.on("click","li",init.clickAddPage);
-        init.className.pleaseLogin.on("click",init.clickAddPage);
+        if(init.alreadyLogin==0){
+            init.className.stair_nav_right.on("click","li",init.clickAddPage);
+            $(".stair_nav_right li a").attr("href","javascript:void(0);");
+            //点击请登录获取登录页面
+            init.className.pleaseLogin.on("click",init.clickAddPage);
+            init.className.favoriteClick.on("click",init.clickFavorite);
+
+            init.className.localLeft.on("click", init.cancelFavorite);
+        }else if(init.alreadyLogin==1){
+            $(".stair_nav_right li a").attr("href","segment/shopping_cart/shopping_cart.html");
+            init.className.myFavorite.on("click",init.clickFavorite);
+
+            init.className.favoriteClick.on("click",init.clickFavorite);
+            init.className.localLeft.on("click", init.cancelFavorite);
+
+        }
 
 
-        $.ajax({
-            url:"service/LocalCRUD/src/default/Form",
-            type:"get",
-             dataType:"json",
-            success:function(resultData){
-            console.log(resultData);
-            }
-        });
 
 
 

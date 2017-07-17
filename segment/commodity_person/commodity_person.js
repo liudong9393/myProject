@@ -55,9 +55,40 @@
         //init.rotation;
         init.cancelInterval = setInterval(function(){init.rotation()},3000);
         init.className.commodityContentRotation.on("mouseenter",init.cancelRotation).on("mouseleave",function(){
-            init.cancelInterval = setInterval(function(){init.rotation},3000);
+            init.cancelInterval = setInterval(function(){init.rotation()},3000);
         });
-        $(".commodity_content_rotation_small").on("mouseenter",".commodity_content_img",init.smallRotation);
+        $(".commodity_content_rotation_small")
+            .on("mouseenter",".commodity_content_img",init.smallRotation);
+
+
+        var num = parseInt($("#num").val());
+        $(".add").on("click",function(){
+            ++num;
+            if(num>0){
+                $(".reduce").css({"color":"#000"});
+                $("#num").val(num)
+            }else if(num<=0){
+                $(".reduce").css({"color":"#ccc"})
+            }
+        });
+        $(".reduce").on("click",function(){
+            --num;
+            if(num>0){
+                $(this).css({"color":"#000"});
+                $("#num").val(num)
+            }else if(num<=0){
+                $(this).css({"color":"#ccc"})
+            }
+
+        });
+
+
+
+
+
+
+
+
     })
 }(window.jQuery));
 

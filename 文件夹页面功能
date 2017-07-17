@@ -1,0 +1,27 @@
+main ：项目总页面；
+js：主要是存放js框架文件和主页面js
+style：存放css框架文件和主页面css
+segment：存放各个分支功能页面（文件夹下的页面都有自己的js和css）
+        commodity_person： 单个商品信息展示
+        contact_us：联系我们
+        favorite：收藏夹
+        feedback：意见反馈
+        login_and_registered：登录和注册
+        segment_commodity：页面单个的商品片段
+        segmentPage：各个功能页面的页面片段
+        shopping_cart：购物车
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

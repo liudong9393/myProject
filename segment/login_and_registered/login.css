@@ -68,11 +68,11 @@
 }
 .login_verification_code > span{
     position:absolute;
-    right: 65px;
-    top: 13px;
+    right: 64px;
+    top: 12px;
     border:1px solid #aaa;
-    height:40px;
-    width:15%;
+    height:41px;
+    width:20%;
     font-size: 12px;
     text-align: center;
     line-height: 40px;
@@ -95,11 +95,32 @@
 }
 /*按钮样式*/
 .login_and_registered .login_and_registered_all .login .btn_login {
-    display: flex;
-    padding-top: 10px;
-    margin-left: 20%;
+    width: 100%;
+    padding :20px 0;
+
+}
+.btn_login>div{
+    width: 80%;
+    margin: 0 auto;
+}
+.btn_login>div>input{
+    width: 95%;
+    outline: none;
+    height: 40px;
+    margin:0 auto;
+    color: #f1f1f1;
+    font-size: 18px;
+    background-color: #c40000;
 }
 
+
+
+.immediately_registered{
+    position: relative;
+    left: 70%;
+    top:10px;
+    font-size: 15px;
+}
 
 
 

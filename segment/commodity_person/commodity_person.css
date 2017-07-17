@@ -232,6 +232,7 @@
 .commodity_container{
     width:100%;
     margin: 60px 0;
+
 }
 
 .commodity_container .commodity_content{
@@ -281,19 +282,116 @@
     padding-top:5px;
 }
 .commodity .commodity_content_rotation .commodity_content_rotation_small .commodity_content_img{
-    height:49px;
+    height:55px;
     float: left;
     width: 20%;
 }
 .commodity_content_rotation_small .commodity_content_img >img{
-    width: 90%;
-    margin:0 auto;
+    width: 86%;
+    height:100%;
+    border-radius: 3%;
+    margin-left:7%;
+
 }
 .commodity_container .commodity_content .commodity .commodity_content_particular{
-
-    width: 70px;
+    width: 70%;
+    padding-left: 3%;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.7);
+    -moz-user-select: none; /*火狐*/
+    -webkit-user-select: none; /*webkit浏览器*/
+    -ms-user-select: none; /*IE10*/
+    -khtml-user-select: none; /*早期浏览器*/
+    user-select: none;
 }
 
+/*商品信息*/
+.commodity .commodity_content_particular>p,
+.commodity .commodity_content_particular>div{
+    margin-bottom: 8px;
+}
+/*商品名称*/
+.commodity .commodity_content_particular .commodity_name{
+    font-size: 19px;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 0;
+}
+/*工作时间*/
+.commodity .commodity_content_particular .work_time{
+    font-size: 13px;
+
+}
+/*联系方式*/
+.commodity .commodity_content_particular .contact_information{
+
+}
+/*商家业务*/
+.commodity .commodity_content_particular .commodity_business{
+
+}
+/*价格*/
+.commodity .commodity_content_particular .commodity_price{
+
+}
+/*地址*/
+.commodity .commodity_content_particular .commodity_address{
+
+}
+/*基本选择*/
+.commodity .commodity_content_particular .commodity_basic_choice{
+
+}
+/*具体要求*/
+.commodity .commodity_content_particular .commodity_require{
+
+}
+/*商品数量*/
+.commodity .commodity_content_particular .commodity_number{
+    border: 1px solid #999;
+    width: 100px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+}
+.commodity .commodity_content_particular .commodity_number>input{
+    width: 40%;
+    border-top: none;
+    border-bottom: none;
+    text-align: center;
+    outline: none;
+}
+.commodity .commodity_content_particular .commodity_number>span{
+    /*text-align: center;*/
+    /*border: 1px solid #aaa;*/
+    display: inline-block;
+    width: 24%;
+    height: 100%;
+    cursor: pointer;
+}
+/*购物车*/
+.commodity .commodity_content_particular .shopping_cart{
+    background-color: #c40000;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    color: #f1f1f1;
+    font-size: 18px;
+    border-radius: 3%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+    /*尾部样式*/
 .footer {
     width: 100%;
     height: 350px;

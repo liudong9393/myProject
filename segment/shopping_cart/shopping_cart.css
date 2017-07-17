@@ -144,11 +144,9 @@
     margin-top: 6.6rem;
 }
 
-
-
 /*外部容器样式*/
 .shopping_cart{
-    margin:50px auto;
+    margin:50px 8%;
     width:80%;
     height:auto;
     font-size:13px;

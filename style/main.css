@@ -1,0 +1,483 @@
+/*导航栏样式*/
+
+.head {
+    height: 670px;
+}
+
+.head .nav .nav_top {
+    margin-top: 3px;
+    background-color: #f0f0f0;
+    width: 100%;
+    line-height: 23px;
+    height: 23px;
+    color: #999;
+    font-size: 12px;
+
+}
+
+
+/* 导航栏顶部的样式 */
+
+.head .nav .nav_top>ul>li {
+    padding: 0 8px;
+    cursor: pointer;
+}
+
+.head .nav .nav_top .nav_top_one, .nav_top_one>li {
+    float: left;
+}
+.head .nav .nav_top .nav_top_one, .nav_top_one>li>a{
+    background-color: #f0f0f0;
+    color: #999;
+}
+.head .nav .nav_top .nav_top_two, .nav_top_two>li {
+    float: right;
+    padding-right: 1%;
+}
+
+/* logo样式 */
+
+.head .nav .loge {
+    width: 100%;
+    height: 100px;
+    padding-top: 2rem;
+    line-height: 100px;
+    text-align: center;
+    display: block;
+}
+
+.head .nav .loge>img {
+    height: 100%;
+}
+
+
+/* 搜索框样式 */
+
+.head .nav .nav_middle {
+    text-align: center;
+    padding-top: 2rem;
+    width: 40%;
+    margin: 0 auto;
+}
+
+.head .nav .nav_middle .nav_input {
+    border: 2px solid #C40000;
+    border-radius: 4px;
+    height: 45px;
+    display: flex;
+}
+
+.head .nav .nav_middle .nav_input .search {
+    flex: 6;
+    font-size: 13px;
+    font-weight: 200;
+}
+
+
+/* 搜索框的样式 */
+
+#search {
+    width: 98%;
+    height: 100%;
+    border: none;
+    line-height: 100%;
+}
+
+#search:focus {
+    outline: none;
+}
+
+
+/* 搜索按钮样式 */
+
+#btn_search {
+    flex: 1;
+    color: #fff;
+    font-weight: 700;
+    background-color: #C40000;
+}
+
+
+/* 导航栏 */
+
+.head .nav .nav_bottom {
+    width: 100%;
+    height: 40px;
+    background-color: #f0f0f0;
+    margin-top: 3rem;
+    float: right;
+}
+
+.head .nav .nav_bottom .nav_bottom_nav {
+    width: 75%;
+    float: left;
+    margin-left: 25%;
+}
+
+
+/* 导航栏动画 */
+
+.head .nav .nav_bottom .nav_bottom_nav>li {
+    float: left;
+    width: 4.0625rem /* 65px */;
+    margin-left: 1%;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.head .nav .nav_bottom .nav_bottom_nav>li:hover {
+    background-color: #c40000;
+    color: #f0f0f0;
+    border-radius: 50%;
+    transform: rotateY(360deg);
+}
+
+
+/* 导航栏被触发项的样式 */
+
+.head .nav .nav_bottom .nav_bottom_nav .active {
+    background-color: #c40000;
+    color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.head .nav .nav_bottom .nav_bottom_nav .active:hover {
+    border-radius: 5px;
+    transform: rotateX(360deg) scale(1.05);
+}
+
+
+/*导航栏下的的轮播和导航*/
+
+.head .nav .nav_bottom .nav_loop {
+    display: flex;
+    width: 90%;
+    margin-left: 4%;
+}
+
+
+/*导航栏左侧样式*/
+
+.head .nav .nav_bottom .nav_loop .nav_bottom_left {
+    position: relative;
+    top: -50px;
+    color: #f1f1f1;
+    background-color: #c40000;
+    font-size: 15px;
+    border-radius: 6px;
+    flex-grow: 1;
+}
+
+
+/*每一条导航的样式以及鼠标放上去的样式*/
+
+.head .nav .nav_bottom .nav_loop .nav_bottom_left>li {
+    padding: 0.47rem 1rem;
+    cursor: pointer;
+}
+
+.head .nav .nav_bottom .nav_loop .nav_bottom_left>li:hover {
+    color: #0DD178;
+    background-color: #FA5251;
+}
+
+
+/*全部分类这个标题的样式*/
+
+.head .nav .nav_bottom .nav_loop .nav_bottom_left .all_classfy {
+    font-size: 20px;
+    height: 50px;
+    line-height: 50px;
+    font-weight: 700;
+    border-radius: 5px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.head .nav .nav_bottom .nav_loop .nav_bottom_left .all_classfy:hover {
+    background-color: #c40000;
+    color: #f1f1f1;
+}
+
+
+/*轮播图样式*/
+
+.head .nav .nav_bottom .nav_loop .loop {
+    height: 22rem;
+    width: 65%;
+    position: relative;
+    left: .25rem    /* 4px */    ;
+    top: .25rem    /* 4px */    ;
+    flex-grow: 0.5;
+}
+
+.head .nav .nav_bottom .nav_loop .loop .swiper-wrapper .swiper-slide>img {
+    width: 100%;
+    height: 22rem;
+    border-radius: 1.5%;
+}
+
+
+/*广告预留区样式*/
+
+.head .nav .nav_bottom .nav_loop .ad {
+    flex-grow: 0.8;
+}
+
+
+/*楼梯导航，公共样式*/
+
+.stair_nav {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+}
+
+.stair_nav .stair_nav_right,.stair_nav_left {
+    width: 1.875rem  /* 30px */ ;
+    position: fixed;
+    top: 9.375rem  /* 230px */  ;
+
+}
+
+
+.stair_nav .stair_nav_right >li,
+.stair_nav .stair_nav_right >div,
+.stair_nav .stair_nav_right >div>a,
+.stair_nav .stair_nav_right >li>a,
+.stair_nav .stair_nav_left >li>a,
+.stair_nav .stair_nav_left >li {
+    background-color: #463F3F;
+    color: #f1f1f1;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: .25rem/* 4px */;
+}
+
+/*左边的导航*/
+.stair_nav .stair_nav_left {
+    left: 5px;
+}
+
+
+/*右边的导航*/
+
+.stair_nav .stair_nav_right {
+    position: fixed;
+    right: -0.5%;
+    height: 100%;
+    width: 50px;
+}
+
+.stair_nav .stair_nav_right>li{
+    width: 35px;
+}
+.stair_nav .local_left{
+    position: fixed;
+    height: 100%;
+    width: 0;
+    top: 0;
+    z-index: 4;
+}
+.stair_nav .stair_nav_right .favorite{
+    height: 100%;
+    width: 0;
+    position: absolute;
+    top: -150px;
+    right: -40px;
+    z-index: 3;
+}
+.stair_nav .stair_nav_right .line {
+    height: 100%;
+    position: absolute;
+    top: -150px;
+    left: 36px;
+    background-color: #666;
+    width: 4px;
+}
+.stair_nav .stair_nav_right>div{
+    width: 35px;
+    margin-top: 0.25rem;
+
+}
+/*返回顶部*/
+.stair_nav .stair_nav_right .feed_back {
+    /*margin-top: 1rem;*/
+}
+.stair_nav .stair_nav_right .back_top{
+    margin-top:7rem;
+}
+
+/*正文的样式*/
+section{
+    display: none;
+}
+.current{
+    display: block;
+}
+.container {
+    margin-top: 0.5rem;
+    width: 100%;
+    height: auto;
+}
+
+.container .study {
+    width: 90%;
+    margin: 2.25rem
+    /* 20px */
+    auto 0;
+}
+
+.container .study .study_title {
+    font-size: 1.125rem
+    /* 18px */
+    ;
+    font-weight: 700;
+    padding: 20px;
+    background-color: #f1f1f1;
+}
+
+.container .study .study_container .commodity {
+    display: flex;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: .625rem /* 10px */ 0 2rem /* 20px */;
+}
+
+.container .study .study_container .commodity .commodity_information {
+    width: 33.3%;
+    height: 16rem /* 230px */;
+    margin-right: 2%;
+    border-radius: 1%;
+    border: 1px solid #666;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.container .study .study_container .commodity .commodity_information .commodity_img>img {
+    height: 10rem /* 165px */;
+    width: 10rem /* 165px */;
+    text-align: center;
+    padding: .3125rem /* 5px */;
+}
+
+.container .study .study_container .commodity .commodity_information>div {
+    flex-grow: 1;
+    font-size: 13px;
+    padding: 10px 5px;
+}
+
+.container .study .study_container .commodity .commodity_word>div>p {
+    margin-top: 1rem /* 16px */;
+    font-size: 15px;
+    text-align: center;
+}
+
+.container .study .study_container .commodity .commodity_word>div>p>span {
+    color: #c40000;
+}
+
+.container .study .study_container .commodity .commodity_information>p {
+    position: absolute;
+    bottom: -2.5rem /* -40px */;
+    text-align: center;
+    width: 99.6%;
+    left: 0.2%;
+    height: 2.5rem /* 40px */;
+    font-size: 1.25rem /* 20px */;
+    font-weight: 700;
+    border-radius: 3%;
+    cursor: pointer;
+    background-color: #c40000;
+    line-height: 2.5rem /* 40px */;
+    color: #f1f1f1;
+}
+
+
+/*尾部样式*/
+
+.footer {
+    width: 100%;
+    height: 450px;
+    background-color: #dedede;
+    position: relative;
+    bottom: -1.1875rem /* -19px */;
+}
+
+.footer .foot {
+    width: 93%;
+    margin: 0 auto;
+}
+
+
+/*尾部顶部广告*/
+
+.footer .foot .foot_top {
+    display: flex;
+}
+
+.footer .foot .foot_top .foot_top_ad {
+    flex-grow: 1;
+    font-size: 20px;
+    padding-top: 1.25rem /* 20px */;
+    padding-left: 6.25rem /* 100px */;
+}
+
+
+/*尾部内容标题样式*/
+
+.footer .foot .foot_middle {
+    display: flex;
+    padding: 50px 100px 0;
+}
+
+.footer .foot .foot_middle .foot_middle_con {
+    flex-grow: 1;
+}
+
+.footer .foot .foot_middle .foot_middle_con>p {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 0.625rem
+    /* 10px */
+    ;
+}
+
+.footer .foot .foot_middle .foot_middle_con>ul {
+    padding-top: 10px;
+}
+
+.footer .foot .foot_middle .foot_middle_con>ul>li {
+    padding-top: 3px;
+    width: 50%;
+    cursor: pointer;
+    text-align: center;
+}
+
+.footer .foot .foot_middle .foot_middle_con>ul>li:hover,
+.footer .foot .foot_middle .foot_middle_con>ul>li>a:hover {
+    color: #c81623;
+}
+
+.footer .foot .foot_middle .foot_middle_con>ul>li>img {
+    width: 65px;
+    height: 65px;
+}
+
+.obtainPage{
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 3;
+    width:0;
+    height:0;
+}
+
+
+
+
