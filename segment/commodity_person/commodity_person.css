@@ -1,409 +1,494 @@
-/*导航栏样式*/
-.head .nav{
-    position: relative;
-}
-.head .nav .nav_top {
-    margin-top: 3px;
-    background-color: #f0f0f0;
-    width: 100%;
-    line-height: 23px;
-    height: 23px;
-    color: #999;
-    font-size: 12px;
-}
-
-/* 导航栏顶部的样式 */
-
-.head .nav .nav_top>ul>li {
-    padding: 0 8px;
-    cursor: pointer;
-}
-
-.head .nav .nav_top .nav_top_one, .nav_top_one>li {
-    float: left;
-}
-.head .nav .nav_top .nav_top_one, .nav_top_one>li>a{
-    background-color: #f0f0f0;
-    color: #999;
-}
-.head .nav .nav_top .nav_top_two, .nav_top_two>li {
-    float: right;
-}
-
-/* logo样式 */
-
-.head .nav .loge {
-    width: 100%;
-    height: 100px;
-    padding-top: 2rem;
-    line-height: 100px;
-    text-align: center;
-    display: block;
-}
-
-.head .nav .loge>img {
-    height: 100%;
-}
-
-
-/* 搜索框样式 */
-
-.head .nav .nav_middle {
-    text-align: center;
-    padding-top: 2rem;
-    width: 40%;
-    margin: 0 auto;
-}
-
-.head .nav .nav_middle .nav_input {
-    border: 2px solid #C40000;
-    border-radius: 4px;
-    height: 45px;
-    display: flex;
-}
-
-.head .nav .nav_middle .nav_input .search {
-    flex: 6;
-    font-size: 13px;
-    font-weight: 200;
-}
-/* 搜索框的样式 */
-
-#search {
-    width: 98%;
-    height: 100%;
-    border: none;
-    line-height: 100%;
-}
-
-#search:focus {
-    outline: none;
-}
-
-
-/* 搜索按钮样式 */
-
-#btn_search {
-    flex: 1;
-    color: #fff;
-    font-weight: 700;
-    background-color: #C40000;
-}
-
-
-/* 导航栏 */
-
-.head .nav .nav_bottom {
-    width: 100%;
-    height: 40px;
-    background-color: #f0f0f0;
-    margin-top: 3rem;
-    float: right;
-}
-
-.head .nav .nav_bottom .nav_bottom_nav {
-    width: 62%;
-    margin-left: 38%;
-}
-
-
-/* 导航栏动画 */
-
-.head .nav .nav_bottom .nav_bottom_nav>li {
-    float: left;
-    width: 4.0625rem /* 65px */;
-    margin-left: 1%;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 40px;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.head .nav .nav_bottom .nav_bottom_nav>li:hover {
-    background-color: #c40000;
-    color: #f0f0f0;
-    border-radius: 50%;
-    transform: rotateY(360deg);
-}
-
-
-/* 导航栏被触发项的样式 */
-
-.head .nav .nav_bottom .nav_bottom_nav .active {
-    background-color: #c40000;
-    color: #f0f0f0;
-    border-radius: 5px;
-}
-
-.head .nav .nav_bottom .nav_bottom_nav .active:hover {
-    border-radius: 5px;
-    transform: rotateX(360deg) scale(1.1);
-}
-
-.head .nav .nav_loop {
-    width: 18%;
-    margin-left: 10%;
-    position: relative;
-}
-.head .nav .nav_loop .all_classify{
-    height: 50px;
-    line-height: 50px;
-    width:100%;
-    background-color: #c40000;
-    color: #f0f0f0;
-    position: absolute;
-    top: 44px;
-    border-radius: 1%;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 800;
-    z-index: 30;
-}
-/*导航栏左侧样式*/
-.head .nav .nav_loop .nav_bottom_left {
-    /*display: none;*/
-    height:0;
-    overflow: hidden;
-    position: absolute;
-    top: 95px;
-    width: 100%;
-    z-index: 30;
-    color: #f1f1f1;
-    background-color: #c40000;
-    font-size: 15px;
-    border-radius: 0 0 6px 6px;
-}
-
-/*每一条导航的样式以及鼠标放上去的样式*/
-
-.head .nav .nav_loop .nav_bottom_left>li {
-    padding: 0.47rem 1rem;
-    cursor: pointer;
-}
-
-.head .nav .nav_loop .nav_bottom_left>li:hover {
-    color: #0DD178;
-    background-color: #FA5251;
-}
-
-
-.stair_nav {
-    position: relative;
-    z-index: 10;
-}
-
-.stair_nav>ul {
-    width: 1.875rem /* 30px */;
-    position: fixed;
-    top: 9.375rem /* 230px */;
-}
-
-.stair_nav>ul>li, li>a {
-    background-color: #463F3F;
-    color: #f1f1f1;
-    cursor: pointer;
-    text-align: center;
-    margin-bottom: .25rem /* 4px */;
-}
-/*右边的导航*/
-.stair_nav .stair_nav_right {
-    right: 5px;
-    height: 100%;
-}
-
-.stair_nav .stair_nav_right .line {
-    height: 100%;
-    position: absolute;
-    top: -150px;
-    right: -5px;
-    background-color: #666;
-    width: 4px;
-}
-
-
-/*返回顶部*/
-
-.stair_nav .stair_nav_right .feed_back {
-    margin-top: 6.6rem;
-}
-/*外部容器样式*/
-.commodity_container{
-    width:100%;
-    margin: 60px 0;
-
-}
-
-.commodity_container .commodity_content{
-    width:80%;
-    margin: 0 auto;
-}
-
-.commodity_container .commodity_content .commodity{
-    display:flex;
-}
-/*轮播图*/
-.commodity_container .commodity_content .commodity .commodity_content_rotation{
-    width: 30%;
-    border-radius: 2%;
-    border: 1px dotted #ddd;
-    background-color: #cccccc;
-    height:400px;
-}
-/*大图样式*/
-.commodity .commodity_content_rotation .commodity_content_rotation_big{
-    width: 100%;
-    position: relative;
-    height:330px;
-
-}
-.commodity_content_rotation .commodity_content_rotation_big .commodity_content_img{
-     height:100%;
-     width: 100%;
-     position: absolute;
-     z-index: 0;
-    opacity: 0.1;
-
-}
-
-.commodity_content_rotation .commodity_content_rotation_big .index{
-    position: absolute;
-    z-index: 1;
-    opacity: 1;
-}
-.commodity_content_rotation_big .commodity_content_img>img{
-    width: 100%;
-    height:100%;
-    border-radius: 2%;
-}
-/*小图样式*/
-.commodity .commodity_content_rotation .commodity_content_rotation_small{
-    padding-top:5px;
-}
-.commodity .commodity_content_rotation .commodity_content_rotation_small .commodity_content_img{
-    height:55px;
-    float: left;
-    width: 20%;
-}
-.commodity_content_rotation_small .commodity_content_img >img{
-    width: 86%;
-    height:100%;
-    border-radius: 3%;
-    margin-left:7%;
-
-}
-.commodity_container .commodity_content .commodity .commodity_content_particular{
-    width: 70%;
-    padding-left: 3%;
-    font-size: 13px;
-    color: rgba(0, 0, 0, 0.7);
-    -moz-user-select: none; /*火狐*/
-    -webkit-user-select: none; /*webkit浏览器*/
-    -ms-user-select: none; /*IE10*/
-    -khtml-user-select: none; /*早期浏览器*/
-    user-select: none;
-}
-
-/*商品信息*/
-.commodity .commodity_content_particular>p,
-.commodity .commodity_content_particular>div{
-    margin-bottom: 8px;
-}
-/*商品名称*/
-.commodity .commodity_content_particular .commodity_name{
-    font-size: 19px;
-    height: 50px;
-    line-height: 50px;
-    margin-top: 0;
-}
-/*工作时间*/
-.commodity .commodity_content_particular .work_time{
-    font-size: 13px;
-
-}
-/*联系方式*/
-.commodity .commodity_content_particular .contact_information{
-
-}
-/*商家业务*/
-.commodity .commodity_content_particular .commodity_business{
-
-}
-/*价格*/
-.commodity .commodity_content_particular .commodity_price{
-
-}
-/*地址*/
-.commodity .commodity_content_particular .commodity_address{
-
-}
-/*基本选择*/
-.commodity .commodity_content_particular .commodity_basic_choice{
-
-}
-/*具体要求*/
-.commodity .commodity_content_particular .commodity_require{
-
-}
-/*商品数量*/
-.commodity .commodity_content_particular .commodity_number{
-    border: 1px solid #999;
-    width: 100px;
-    height: 25px;
-    line-height: 25px;
-    text-align: center;
-}
-.commodity .commodity_content_particular .commodity_number>input{
-    width: 40%;
-    border-top: none;
-    border-bottom: none;
-    text-align: center;
-    outline: none;
-}
-.commodity .commodity_content_particular .commodity_number>span{
-    /*text-align: center;*/
-    /*border: 1px solid #aaa;*/
-    display: inline-block;
-    width: 24%;
-    height: 100%;
-    cursor: pointer;
-}
-/*购物车*/
-.commodity .commodity_content_particular .shopping_cart{
-    background-color: #c40000;
-    padding: 10px;
-    width: 200px;
-    text-align: center;
-    color: #f1f1f1;
-    font-size: 18px;
-    border-radius: 3%;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-    /*尾部样式*/
-.footer {
-    width: 100%;
-    height: 350px;
-    background-color: #dedede;
-    position: relative;
-    bottom: -1.1875rem /* -19px */;
-}
-
-.footer .foot {
-    width: 93%;
-    margin: 0 auto;
-}
+    /*导航栏样式*/
+    .head .nav{
+        position: relative;
+    }
+    .head .nav .nav_top {
+        margin-top: 3px;
+        background-color: #f0f0f0;
+        width: 100%;
+        line-height: 23px;
+        height: 23px;
+        color: #999;
+        font-size: 12px;
+    }
+
+    /* 导航栏顶部的样式 */
+
+    .head .nav .nav_top>ul>li {
+        padding: 0 8px;
+        cursor: pointer;
+    }
+
+    .head .nav .nav_top .nav_top_one, .nav_top_one>li {
+        float: left;
+    }
+    .head .nav .nav_top .nav_top_one, .nav_top_one>li>a{
+        background-color: #f0f0f0;
+        color: #999;
+    }
+    .head .nav .nav_top .nav_top_two, .nav_top_two>li {
+        float: right;
+    }
+
+    /* logo样式 */
+
+    .head .nav .loge {
+        width: 100%;
+        height: 100px;
+        padding-top: 2rem;
+        line-height: 100px;
+        text-align: center;
+        display: block;
+    }
+
+    .head .nav .loge>img {
+        height: 100%;
+    }
+
+
+    /* 搜索框样式 */
+
+    .head .nav .nav_middle {
+        text-align: center;
+        padding-top: 2rem;
+        width: 40%;
+        margin: 0 auto;
+    }
+
+    .head .nav .nav_middle .nav_input {
+        border: 2px solid #C40000;
+        border-radius: 4px;
+        height: 45px;
+        display: flex;
+    }
+
+    .head .nav .nav_middle .nav_input .search {
+        flex: 6;
+        font-size: 13px;
+        font-weight: 200;
+    }
+    /* 搜索框的样式 */
+
+    #search {
+        width: 98%;
+        height: 100%;
+        border: none;
+        line-height: 100%;
+    }
+
+    #search:focus {
+        outline: none;
+    }
+
+
+    /* 搜索按钮样式 */
+
+    #btn_search {
+        flex: 1;
+        color: #fff;
+        font-weight: 700;
+        background-color: #C40000;
+    }
+
+
+    /* 导航栏 */
+
+    .head .nav .nav_bottom {
+        width: 100%;
+        height: 40px;
+        background-color: #f0f0f0;
+        margin-top: 3rem;
+        float: right;
+    }
+
+    .head .nav .nav_bottom .nav_bottom_nav {
+        width: 62%;
+        margin-left: 38%;
+    }
+
+
+    /* 导航栏动画 */
+
+    .head .nav .nav_bottom .nav_bottom_nav>li {
+        float: left;
+        width: 4.0625rem /* 65px */;
+        margin-left: 1%;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 40px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .head .nav .nav_bottom .nav_bottom_nav>li:hover {
+        background-color: #c40000;
+        color: #f0f0f0;
+        border-radius: 50%;
+        transform: rotateY(360deg);
+    }
+
+
+    /* 导航栏被触发项的样式 */
+
+    .head .nav .nav_bottom .nav_bottom_nav .active {
+        background-color: #c40000;
+        color: #f0f0f0;
+        border-radius: 5px;
+    }
+
+    .head .nav .nav_bottom .nav_bottom_nav .active:hover {
+        border-radius: 5px;
+        transform: rotateX(360deg) scale(1.1);
+    }
+
+    .head .nav .nav_loop {
+        width: 18%;
+        margin-left: 10%;
+        position: relative;
+    }
+    .head .nav .nav_loop .all_classify{
+        height: 50px;
+        line-height: 50px;
+        width:100%;
+        background-color: #c40000;
+        color: #f0f0f0;
+        position: absolute;
+        top: 44px;
+        border-radius: 1%;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 800;
+        z-index: 30;
+    }
+    /*导航栏左侧样式*/
+    .head .nav .nav_loop .nav_bottom_left {
+        /*display: none;*/
+        height:0;
+        overflow: hidden;
+        position: absolute;
+        top: 95px;
+        width: 100%;
+        z-index: 30;
+        color: #f1f1f1;
+        background-color: #c40000;
+        font-size: 15px;
+        border-radius: 0 0 6px 6px;
+    }
+
+    /*每一条导航的样式以及鼠标放上去的样式*/
+
+    .head .nav .nav_loop .nav_bottom_left>li {
+        padding: 0.47rem 1rem;
+        cursor: pointer;
+    }
+
+    .head .nav .nav_loop .nav_bottom_left>li:hover {
+        color: #0DD178;
+        background-color: #FA5251;
+    }
+
+
+    .stair_nav {
+        position: relative;
+        z-index: 10;
+    }
+
+    .stair_nav>ul {
+        width: 1.875rem /* 30px */;
+        position: fixed;
+        top: 9.375rem /* 230px */;
+    }
+
+    .stair_nav>ul>li, li>a {
+        background-color: #463F3F;
+        color: #f1f1f1;
+        cursor: pointer;
+        text-align: center;
+        margin-bottom: .25rem /* 4px */;
+    }
+    /*右边的导航*/
+    .stair_nav .stair_nav_right {
+        right: 5px;
+        height: 100%;
+    }
+
+    .stair_nav .stair_nav_right .line {
+        height: 100%;
+        position: absolute;
+        top: -150px;
+        right: -5px;
+        background-color: #666;
+        width: 4px;
+    }
+
+
+    /*返回顶部*/
+
+    .stair_nav .stair_nav_right .feed_back {
+        margin-top: 6.6rem;
+    }
+    /*外部容器样式*/
+    .commodity_container{
+        width:100%;
+        margin: 60px 0;
+    }
+
+    .commodity_container .commodity_content{
+        width:80%;
+        margin: 0 auto;
+    }
+
+    .commodity_container .commodity_content .commodity{
+        display:flex;
+    }
+    /*轮播图*/
+    .commodity_container .commodity_content .commodity .commodity_content_rotation{
+        width: 30%;
+        border-radius: 2%;
+        border: 1px dotted #ddd;
+        background-color: #cccccc;
+        height:400px;
+    }
+    /*大图样式*/
+    .commodity .commodity_content_rotation .commodity_content_rotation_big{
+        width: 100%;
+        position: relative;
+        height:330px;
+
+    }
+    .commodity_content_rotation .commodity_content_rotation_big .commodity_content_img{
+        height:100%;
+        width: 100%;
+        position: absolute;
+        z-index: 0;
+        opacity: 0.1;
+
+    }
+
+    .commodity_content_rotation .commodity_content_rotation_big .index{
+        position: absolute;
+        z-index: 1;
+        opacity: 1;
+    }
+    .commodity_content_rotation_big .commodity_content_img>img{
+        width: 100%;
+        height:100%;
+        border-radius: 2%;
+    }
+    /*小图样式*/
+    .commodity .commodity_content_rotation .commodity_content_rotation_small{
+        padding-top:5px;
+    }
+    .commodity .commodity_content_rotation .commodity_content_rotation_small .commodity_content_img{
+        height:55px;
+        float: left;
+        width: 20%;
+    }
+    .commodity_content_rotation_small .commodity_content_img >img{
+        width: 86%;
+        height:100%;
+        border-radius: 3%;
+        margin-left:7%;
+
+    }
+    .commodity_container .commodity_content .commodity .commodity_content_particular{
+        width: 70%;
+        padding-left: 3%;
+        font-size: 13px;
+        color: rgba(0, 0, 0, 0.7);
+        -moz-user-select: none; /*火狐*/
+        -webkit-user-select: none; /*webkit浏览器*/
+        -ms-user-select: none; /*IE10*/
+        -khtml-user-select: none; /*早期浏览器*/
+        user-select: none;
+    }
+
+    /*商品信息*/
+    .commodity .commodity_content_particular>p,
+    .commodity .commodity_content_particular>div{
+        margin-bottom: 20px;
+    }
+    /*商品名称*/
+    .commodity .commodity_content_particular .commodity_name{
+        font-size: 19px;
+        height: 50px;
+        line-height: 50px;
+        margin-top: 0;
+    }
+    /*工作时间*/
+    .commodity .commodity_content_particular .work_time{
+        font-size: 13px;
+
+    }
+    /*联系方式*/
+    .commodity .commodity_content_particular .contact_information{
+
+    }
+    /*商家业务*/
+    .commodity .commodity_content_particular .commodity_business{
+
+    }
+    /*价格*/
+    .commodity .commodity_content_particular .commodity_price{
+
+    }
+    /*地址*/
+    .commodity .commodity_content_particular .commodity_address{
+
+    }
+    /*基本选择*/
+    .commodity .commodity_content_particular .commodity_basic_choice{
+
+    }
+    /*具体要求*/
+    .commodity .commodity_content_particular .commodity_require{
+
+    }
+    /*商品数量*/
+    .commodity .commodity_content_particular .commodity_number{
+        border: 1px solid #999;
+        width: 100px;
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+    }
+    .commodity .commodity_content_particular .commodity_number>input{
+        width: 40%;
+        border-top: none;
+        border-bottom: none;
+        text-align: center;
+        outline: none;
+
+    }
+    .commodity .commodity_content_particular .commodity_number>span{
+        display: inline-block;
+        width: 23%;
+        font-size: 18px;
+        height: 100%;
+        cursor: pointer;
+    }
+    .commodity .commodity_content_particular .commodity_number .reduce{
+        color:#999;
+    }
+    /*购物车*/
+    .commodity .commodity_content_particular .shopping_cart{
+        background-color: #c40000;
+        padding: 10px;
+        width: 200px;
+        text-align: center;
+        color: #f1f1f1;
+        font-size: 18px;
+        border-radius: 3%;
+    }
+
+    .evaluation{
+        margin: 40px 0;
+        display: flex;
+    }
+
+
+
+    .evaluation .evaluation_main {
+        margin-left: 40px;
+        width: 75%;
+    }
+
+    .evaluation .evaluation_main .shopping{
+        position: absolute;
+        width: 100px;
+        height: 100%;
+        right: 0;
+        top: 1px;
+        background-color: #c40000;
+        color: #f1f1f1;
+        font-size: 16px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .evaluation .evaluation_main .evaluation_title{
+        border-radius: 3px;
+        background-color: #dddddd;
+        font-size: 17px;
+        height: 40px;
+        line-height: 40px;
+        border-bottom: 2px solid #c40000;
+        width: 100%;
+        position: relative;
+    }
+
+    .evaluation .evaluation_main .evaluation_title>div{
+        float: left;
+        margin-right: 3%;
+        cursor: pointer;
+        padding: 0 5px;
+    }
+
+    .action{
+        background-color: #c40000;
+        color: #f1f1f1;
+        border-radius: 3px;
+    }
+
+    .evaluation .evaluation_main .evaluation_presentation{
+        padding: 10px 30px;
+        width: 100%;
+    }
+
+    .evaluation .evaluation_main .evaluation_presentation>div{
+        height: 500px;
+        padding: 0 5px;
+        margin-top: 5px;
+    }
+
+    .evaluation .other{
+        width: 25%;
+        border: 1px dotted #999;
+        border-radius: 5px;
+    }
+
+    .other .other_goods{
+        width: 100%;
+    }
+
+    .other .other_goods .other_container .other_img{
+        width: 100%;
+        height: 200px;
+    }
+
+    .other .other_goods .other_container .title{
+        display: flex;
+        font-size: 13px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .other .other_goods .other_container .title>span{
+        flex-grow: 1;
+    }
+
+    .other .other_goods .other_container .other_img>img{
+        width: 100%;
+        height: 100%;
+    }
+
+
+        /*尾部样式*/
+    .footer {
+        width: 100%;
+        height: 350px;
+        background-color: #dedede;
+        position: relative;
+        bottom: -1.1875rem /* -19px */;
+        margin-top:-10px;
+    }
+
+    .footer .foot {
+        width: 93%;
+        margin: 0 auto;
+    }
 
 
     /*尾部顶部广告*/

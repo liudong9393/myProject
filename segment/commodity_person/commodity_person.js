@@ -8,8 +8,6 @@
             timer:null,
             cancelInterval:null,
             count:1,
-
-
             className:{
                 pic:$(".commodity_content_rotation_big .commodity_content_img"),
                 commodityContentRotation:$(".commodity_content_rotation")
@@ -63,24 +61,56 @@
 
         var num = parseInt($("#num").val());
         $(".add").on("click",function(){
-            ++num;
-            if(num>0){
+                ++num;
                 $(".reduce").css({"color":"#000"});
-                $("#num").val(num)
-            }else if(num<=0){
-                $(".reduce").css({"color":"#ccc"})
-            }
+                $("#num").val(num);
+
         });
         $(".reduce").on("click",function(){
-            --num;
-            if(num>0){
+            if(num>1){
+                --num;
                 $(this).css({"color":"#000"});
                 $("#num").val(num)
-            }else if(num<=0){
-                $(this).css({"color":"#ccc"})
+            }
+            if(num<=1){
+                $(this).css({"color":"#999"})
             }
 
         });
+
+        $(".evaluation_title").on("click","div",function(){
+            $(".evaluation_title>div").removeClass("action");
+            $(this).addClass("action");
+            var  index= parseInt($(this).attr("data-href"));
+            for(var i=0;i<4;i++){
+                if(i<index){
+                    $(".evaluation_presentation>div").eq(i).css({"display":"none"});
+                }else if(i>=index){
+                    $(".evaluation_presentation>div").eq(i).css({"display":"block"});
+                }
+            }
+        });
+        $(document).on("scroll",function(){
+            var top = $(window).scrollTop();
+            if (parseInt(top) <= 1050) { //判断页面高度
+                $(".evaluation_title").css({
+                    "position": "relative",
+                    "top": "none",
+                    "width": "100%"
+
+                });
+
+            } else if (parseInt(top) > 1050) {
+                $(".evaluation_title").css({
+                    "position": "fixed",
+                    "top":"5px",
+                    "width": "57.5%"
+                });
+
+            }
+        });
+
+
 
 
 

@@ -58,8 +58,24 @@
     padding-top: 2rem;
     width: 40%;
     margin: 0 auto;
-}
+    position: relative;
 
+}
+.head .nav .nav_middle .search_result{
+    width: 81%;
+    border: 1px dotted #aaa;
+    position: absolute;
+    z-index: 3;
+    top: 80px;
+    line-height: 24px;
+    text-align: left;
+    padding:2%;
+    background-color: #fff;
+    display: none;
+}
+.head .nav .nav_middle .search_result>p{
+    cursor: pointer;
+}
 .head .nav .nav_middle .nav_input {
     border: 2px solid #C40000;
     border-radius: 4px;
@@ -318,20 +334,22 @@ section{
 .current{
     display: block;
 }
+
+/*内容部分*/
 .container {
-    margin-top: 0.5rem;
+    margin-top: 4rem;
     width: 100%;
     height: auto;
 }
 
-.container .study {
+.container .classify {
     width: 90%;
     margin: 2.25rem
     /* 20px */
     auto 0;
 }
 
-.container .study .study_title {
+.container .classify .study_title {
     font-size: 1.125rem
     /* 18px */
     ;
@@ -340,7 +358,7 @@ section{
     background-color: #f1f1f1;
 }
 
-.container .study .study_container .commodity {
+.container .classify .study_container .commodity {
     display: flex;
     width: 100%;
     height: auto;
@@ -348,7 +366,7 @@ section{
     margin: .625rem /* 10px */ 0 2rem /* 20px */;
 }
 
-.container .study .study_container .commodity .commodity_information {
+.container .classify .study_container .commodity .commodity_information {
     width: 33.3%;
     height: 16rem /* 230px */;
     margin-right: 2%;
@@ -359,30 +377,30 @@ section{
     overflow: hidden;
 }
 
-.container .study .study_container .commodity .commodity_information .commodity_img>img {
+.container .classify .study_container .commodity .commodity_information .commodity_img>img {
     height: 10rem /* 165px */;
     width: 10rem /* 165px */;
     text-align: center;
     padding: .3125rem /* 5px */;
 }
 
-.container .study .study_container .commodity .commodity_information>div {
+.container .classify .study_container .commodity .commodity_information>div {
     flex-grow: 1;
     font-size: 13px;
     padding: 10px 5px;
 }
 
-.container .study .study_container .commodity .commodity_word>div>p {
+.container .classify .study_container .commodity .commodity_word>div>p {
     margin-top: 1rem /* 16px */;
     font-size: 15px;
     text-align: center;
 }
 
-.container .study .study_container .commodity .commodity_word>div>p>span {
+.container .classify .study_container .commodity .commodity_word>div>p>span {
     color: #c40000;
 }
 
-.container .study .study_container .commodity .commodity_information>p {
+.container .classify .study_container .commodity .commodity_information>p {
     position: absolute;
     bottom: -2.5rem /* -40px */;
     text-align: center;

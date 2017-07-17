@@ -41,15 +41,15 @@
             fade_in_cart: function() { //实现淡入函数
                 clearTimeout(init.timer);
                 //这里触发hover事件
-                var commodity_information_index = $(this).attr("index"); //获取当前这个标签节点
+                //var commodity_information_index = $(this).attr("index"); //获取当前这个标签节点
                 var shopping_cart_index = $(this).find(".shopping_cart[data-href]")
                 .attr("data-href");
                 init.timer = setTimeout(function() {//实现当事件在执行时间内不触发这个事件
-                    if (commodity_information_index == shopping_cart_index) {//判断标签标记的字符串
-                        $(".shopping_cart").eq(parseInt(shopping_cart_index)).animate({
+                    //if (commodity_information_index == shopping_cart_index) {//判断标签标记的字符串
+                        $(".shopping_cart[data-href="+shopping_cart_index+"]").animate({
                             bottom: '0'
                         }, 300);
-                    }
+                    //}
                     return false;
                 }, 200);
             },
@@ -179,9 +179,63 @@
 
         }
 
+        var index = 0;
+        //模糊查询
+        $("#search").on("keyup",function(){
+            if($("#search").val()==""){
+                $(".search_result").css({"display":"none"});
+            }else{
+                $(".search_result").css({"display":"block"});
+                $.ajax({
+                    url: "",
+                    type: "post",
+                    dataType:"json",
+                    data:{
+                      "search": $(this).val()
+                    },
+                    success: function(resultData) {
+                        $.each(resultData,function(index,data){
+                            $("p").append(data.name);
+                        })
+                    },
+                    error:function() {
+                        alert("文件加载有问题!!!");
+                    }
+                })
+            }
+        }).on("blur",function(){//失去焦点
+            $(".search_result").css({"display":"none"});
 
+        }).on("keydown",function (event) {//上下键获取焦点
+            var key = event.keyCode;
+            var searchResult = $(".search_result>p");
+            var search = $(".search_result");
+            if(search.css("display")=="block"){
+                var select = search.find("p:eq(" + index + ")");
+                //颜色样式
+                select.css("background", "#aaa").siblings().css("background", "");
+                if (key == 38) { /*向上按钮*/
+                    index--;
+                    if (index < 0) {//到顶了，
+                        index = parseInt(searchResult.length) - 1;
+                    }
+                    $("#search").val(select.text());/*搜索框内容*/
+                } else if (key == 40) {/*向下按钮*/
+                    index++;
+                    if (index > parseInt(searchResult.length)-1) {//到底了
+                        index = 0;
+                    }
+                    $("#search").val(select.text());
+                }
+            }
+            if (key == 13) {/*回车搜索*/
 
+            }
+        });
 
+        $(".search_result>p").on("click",function(){
+            $("#search").val($(this).text());
+        });
 
 
 
