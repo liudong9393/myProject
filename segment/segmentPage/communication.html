@@ -1,3 +1,335 @@
+<!--<link rel="stylesheet" href="../../style/initialize.css"/>-->
+<meta charset="utf-8"/>
+<style>
+
+    .content{
+        height: 1000px;
+        width: 100%;
+    }
+    .content .content_cols{
+        width: 80%;
+        margin: 20px auto;
+        position: relative;
+        display: flex;
+        height: 1000px;
+    }
+    .content .content_cols>div{
+        border-radius: 3px;
+        position: relative;
+        /*border: 1px dotted;*/
+    }
+    /*主要内容*/
+    .content .content_cols .content_main{
+        width: 70%;
+        background-color: #007aff;
+        padding: 10px;
+    }
+
+    .content .content_cols .content_main .main>div{
+        margin-bottom: 10px;
+        background-color: #fff;
+    }
+    .content_main .main .publishing{
+        width: 98%;
+        padding: 1%;
+    }
+
+    .content_main .main .publishing .publish_text>p{
+        color: #ff333b;
+    }
+
+    .content_main .main .publishing .publish_text>textarea{
+        width: 98%;
+        padding: 5px;
+        outline: none;
+        resize: none;
+    }
+    
+    .main .publishing .kind{
+        margin-top:5px;
+        display: flex;
+    }
+
+    .main .publishing .kind>div{
+        flex-grow: 1;
+        text-align: center;
+        line-height: 40px;
+        height: 40px;
+        color: #a60fff;
+    }
+
+    .main .publishing .kind>div:last-child {
+        flex-grow: 4;
+        text-align: right;
+    }
+
+    .main .publishing .kind>div:last-child >input{
+        width:80px;
+        outline: none;
+        background-color: #eb7350;
+        color: #f1f1f1;
+        border-radius: 3px;
+        height: 40px;
+    }
+
+    .content_main .main .published{
+        width: 100%;
+    }
+    .published .published_content .head_portrait{
+        width: 100%;
+        display: flex;
+        height: 100px;
+    }
+
+    .published .published_content .head_portrait .head_pic{
+        margin: 20px;
+        width: 60px;
+        height: 60px;
+    }
+    .published .published_content .head_portrait .head_pic > img{
+        width: 100%;
+        height: 100%;
+    }
+    .published .published_content .head_portrait .user{
+        flex-grow: 1;
+        height: 100px;
+    }
+    .published .published_content .head_portrait .user>div{
+        height: 50px;
+    }
+    .published .published_content .head_portrait .user .user_name {
+        line-height: 60px;
+        font-weight: 800;
+    }
+    .published .published_content .published_main{
+        width: 80%;
+        background-color: #f1f1f1;
+        padding: 0 8% ;
+        margin: 2% auto;
+        line-height: 20px;
+        font-size: 14px;
+
+    }
+
+    .published .published_content .published_bottom{
+        width: 100%;
+        margin-top: 10px;
+        padding-top: 3px;
+        display: flex;
+        border-top:1px dotted;
+        height: 30px;
+
+    }
+    .published .published_content .published_bottom >div{
+        flex-grow: 1;
+        line-height: 20px;
+        height: 20px;
+        padding: 3px;
+        font-size: 12px;
+        text-align: center;
+        border-left: 1px dotted;
+    }
+    .published .published_content .published_bottom >div:first-child {
+        border-left: none;
+    }
+
+    /*右侧*/
+    .content .content_cols .content_right{
+        width: 24.5%;
+        padding: 10px 3px;
+        position: relative;
+        /*position: fixed;*/
+        /*right: 6.5%;*/
+        /*top: 10px;*/
+        margin-left: 1%;
+        background-color: #42ebff;
+     }
+
+    .content_right .personnel{
+        width: 99%;
+        background-color: #fff;
+        border: 1px dotted;
+        border-radius: 5px;
+
+    }
+    .content_right .personnel .head{
+        width: 100%;
+        height: 60px;
+        background-color: #007aff;
+        margin-bottom: 10%;
+    }
+
+    .content_right .personnel .head .img {
+        margin: 0 auto;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        position: relative;
+        cursor: pointer;
+        top: 50%;
+    }
+    .content_right .personnel .head .img>img {
+        width: 60px;
+        border-radius: 50%;
+        height: 60px;
+    }
+
+    .content_right .personnel >p {
+        text-align: center;
+        cursor: pointer;
+        padding: 5px 0;
+    }
+
+    .content_right .personnel .personnel_bottom{
+        display: flex;
+        width: 100%;
+        height: 35px;
+        padding: 5px 0 10px;
+    }
+    .content_right .personnel .personnel_bottom >div{
+        width: 33.33%;
+        text-align: center;
+        cursor: pointer;
+        border-right: 1px dotted;
+    }
+
+    .content_right .personnel .personnel_bottom >div:last-child{
+        border-right:  none;
+    }
+    .content_right .topic{
+        padding: 1px;
+        background-color: #fff;
+        margin-top: 10px;
+        border: 1px dotted;
+        border-radius: 5px;
+    }
+    .content_right .topic .title{
+        display: flex;
+        width: 100%;
+        margin: 3px 0;
+    }
+    .content_right .topic .title>p {
+        flex-grow: 1;
+    }
+    .content_right .topic .title>p:first-child{
+        font-weight: 800;
+        padding-left: 1px;
+    }
+
+
+    .content_right .topic .title>p:last-child {
+        text-align: end;
+        padding-right: 3px;
+        cursor: pointer;
+    }
+
+    .content_right .topic .topic_content{
+        width: 100%;
+    }
+
+    .content_right .topic .topic_content >p{
+        padding-left:5px;
+        height: 25px;
+        cursor: pointer;
+        line-height: 25px;
+    }
+
+</style>
+
+<!--交流页面-->
+<div class="container">
+    <div class="content">
+        <div class="content_cols">
+            <!-- 主要的信息内容-->
+            <div class="content_main">
+                <div class="main">
+                    <div class="publishing">
+                        <div class="publish_text">
+                            <p>心里话这里说</p>
+                            <textarea id="" rows="6"></textarea>
+                        </div>
+                        <div class="kind">
+                            <div class="express"><span>表情</span></div>
+                            <div class="pic"><span>图片</span></div>
+                            <div class="vio"><span>视频</span></div>
+                            <div class="public"><span>公开</span></div>
+                            <div class="publish">
+                                <input type="button" value="发布"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="published">
+                        <div class="published_content">
+                            <div class="head_portrait">
+                                <div class="head_pic">
+                                    <img src="" alt=""/>
+                                </div>
+                                <div class="user">
+                                    <div class="user_name">kongkongdljasdkljsdakljkl</div>
+                                    <div class="published_time">时间</div>
+                                </div>
+                            </div>
+                            <div class="published_main">
+                                sdfdsfsdfasd
+                            </div>
+                            <div class="published_bottom">
+                                <div>收藏</div>
+                                <div>转发</div>
+                                <div>评论</div>
+                                <div>点赞</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 个人的信息以及其他的广告内容-->
+            <div class="content_right">
+                <div class="personnel">
+                    <div class="head">
+                        <div class="img">
+                            <img src="../../images/logo/logo1.jpg" alt="图片未加载"/>
+                        </div>
+                    </div>
+                    <p>名</p>
+                    <div class="personnel_bottom">
+                        <div>关注</div>
+                        <div>粉丝</div>
+                        <div>已发布</div>
+                    </div>
+                </div>
+                <!-- 热门话题 -->
+                <div class="topic">
+                    <div class="title">
+                        <p>热门话题</p>
+                        <p>换一换</p>
+                    </div>
+                    <div class="topic_content">
+                        <p>#挑战不可能2017#推荐</p>
+                        <p>10.8亿#我的前半生#</p>
+                        <p>89.8亿#楚乔传#</p>
+                        <p>410万#张杰mtv颁奖礼#</p>
+                        <p>22.5亿#我们的少年时代#</p>
+                        <p>7万#百度网盘用户信息泄露#</p>
+                        <p>517#男孩独自乘机被逐出机舱#</p>
+                        <p>16万#向外来垃圾说不#</p>
+                        <p>17万#强制到富士康实习#</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

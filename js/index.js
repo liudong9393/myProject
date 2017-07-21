@@ -238,10 +238,49 @@
         });
 
 
+        init.className.Document.on("scroll",function(){
+            var content = $(".content");
+            var toTop = content.offset().top-$(window).scrollTop();
+            var contentRight = $(".content_right");
+            var innerTop = contentRight.offset().top-content.offset().top;
+            var maxTop = content.height() - contentRight.height();
+            console.log(contentRight.offset().top-content.offset().top);
+            //console.log(maxTop-19);
 
+            if(toTop<=10 && innerTop<maxTop-19){
+                contentRight.css({
+                    "position":"fixed",
+                    "right": "11.66%",
+                    "top": "10px",
+                    "width" :"19.6%"
+                })
+            }else if(toTop>10) {
+                contentRight.css({
+                    "position":"relative",
+                    "right": "0",
+                    "top": "0",
+                    "width" :"24.5%"
+                })
+            }
+            else if(toTop<=10 && innerTop>maxTop-19) {
+                contentRight.css({
+                    "position": "absolute",
+                    "right": "2%",
+                    "top": "55%",
+                    "width" :"24.5%"
+                })
+            }
+        });
 
-
-
+        $.ajax({
+            url:"servletData/CityServlet",
+            data:{},
+            dataType:"json",
+            type:"post",
+            success:function(data){
+                console.log(data);
+            }
+        })
 
 
 
